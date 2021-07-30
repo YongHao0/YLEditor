@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@babel",
+    "@typescript-eslint"
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    },
+    "sourceType": "module",
+    "parser": "@typescript-eslint/parser"
+  },
+  "rules": {
+    "array-callback-return": "error", // 强制数组方法的回调函数中有 return 语句
+    "block-scoped-var": "error", // 强制把变量的使用限制在其定义的作用域范围内
+    "eqeqeq": "error", // 必须用 === 或 !==
+    "no-eval": "error", // 禁用 eval()
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ], // 强制使用 2 空格缩进
+    "quotes": [
+      "error",
+      "single"
+    ], // 强制单引号
+    "no-console": "warn", // console.xx ⚠️
+    "curly": [
+      "error",
+      "all"
+    ], // 强制所有控制语句使用一致的括号风格
+    "max-nested-callbacks": [
+      "error",
+      {
+        "max": 3
+      }
+    ], // 强制回调函数最大嵌套 3 层
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ], // 禁止多空行
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/valid-v-for": "off",
+    "vue/max-attributes-per-line": "off",
+    "vue/multiline-html-element-content-newline": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}

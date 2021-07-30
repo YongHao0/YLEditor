@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "ES2019",
+    "module": "ESNext",
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    // "declaration": true, // 是否给每个文件生成 .d.ts
+    // "declarationDir": "./types",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/types/*": ["./src/types/*"]
+    },
+    "lib": [
+      "ES2019",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.d.ts",
+    "./src/**/*.vue",
+    "./types/*.d.ts"
+  ]
+}
